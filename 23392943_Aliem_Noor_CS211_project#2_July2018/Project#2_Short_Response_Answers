@@ -1,0 +1,24 @@
+Q1.3: Explain why the print() method is allowed to call the date() method.
+When an object invokes the print method, the method has access to all 
+the object’s data members and functions specified in the class – we are “inside” the class. 
+The date method knows which object is invoking it because of the implicit this pointer.
+
+Q2.2: Explain why no changes are required in the function body of release().
+The delete operator does not need to consider the data type of the 
+allocated memory, only whether memory was allocated for a single 
+variable as opposed to an array.
+
+Q2.3: Explain why no changes are required in the function bodies for any 
+of the constructors, copy, assignment and destructor.
+The data type of the array pointer (_vec) isn’t referred to inside the 
+bodies of any of these functions.
+
+Q2.4: Explain why no changes are required in the function bodies for clear() 
+and pop back().
+Both functions only deal with the _size data member, which stays an int type.
+
+Q2.10: Explain why the input to “print(...)” is const but 
+“print(. . . )” itself is not const.
+Const is only relevant for class methods, generating a compiler error 
+if the class method modifies the invoking object. The print function is 
+not a member of either of the 2 classes.
